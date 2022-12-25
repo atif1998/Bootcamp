@@ -10,7 +10,7 @@ const Spasm = () => {
     e.preventDefault();
     console.log(e.target.elements, "Spasms");
     const { firstName, lastName, userName, email } = e.target.elements;
-
+    console.log(state);
     const payload = {
       firstName: firstName.value,
       lastName: lastName.value,
@@ -25,79 +25,77 @@ const Spasm = () => {
   };
   return (
     <div>
-      <Form onSubmit={handleSubmit}>
-        <FormGroup>
-          <Label for="firstName">FirstName</Label>
-          <Input
-            id="firstName"
-            name="firstName"
-            placeholder="FirstName"
-            type="text"
-            value={state.firstName}
-            onChange={(e) =>
-              dispatch({
-                type: "changeValue",
-                field: e.target.name,
-                value: e.target.value,
-              })
-            }
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="lastName">LastName</Label>
-          <Input
-            id="lastName"
-            name="lastName"
-            placeholder="LastName"
-            type="text"
-            value={state.lastName}
-            onChange={(e) =>
-              dispatch({
-                type: "changeValue",
-                field: e.target.name,
-                value: e.target.value,
-              })
-            }
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="userName">username</Label>
-          <Input
-            id="userName"
-            name="userName"
-            placeholder="userName"
-            type="text"
-            value={state.userName}
-            onChange={(e) =>
-              dispatch({
-                type: "changeValue",
-                field: e.target.name,
-                value: e.target.value,
-              })
-            }
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleEmail">Email</Label>
-          <Input
-            id="exampleEmail"
-            name="email"
-            placeholder="with a placeholder"
-            type="email"
-            value={state.email}
-            onChange={(e) =>
-              dispatch({
-                type: "changeValue",
-                field: e.target.name,
-                value: e.target.value,
-              })
-            }
-          />
-        </FormGroup>
+      <>
+        <Label for="firstName">FirstName</Label>
+        <Input
+          id="firstName"
+          name="firstName"
+          placeholder="FirstName"
+          type="text"
+          value={state.firstName}
+          onChange={(e) =>
+            dispatch({
+              type: "changeValue",
+              field: e.target.name,
+              value: e.target.value,
+            })
+          }
+        />
+      </>
+      <>
+        <Label for="lastName">LastName</Label>
+        <Input
+          id="lastName"
+          name="lastName"
+          placeholder="LastName"
+          type="text"
+          value={state.lastName}
+          onChange={(e) =>
+            dispatch({
+              type: "changeValue",
+              field: e.target.name,
+              value: e.target.value,
+            })
+          }
+        />
+      </>
+      <>
+        <Label for="userName">username</Label>
+        <Input
+          id="userName"
+          name="userName"
+          placeholder="userName"
+          type="text"
+          value={state.userName}
+          onChange={(e) =>
+            dispatch({
+              type: "changeValue",
+              field: e.target.name,
+              value: e.target.value,
+            })
+          }
+        />
+      </>
+      <>
+        <Label for="exampleEmail">Email</Label>
+        <Input
+          id="exampleEmail"
+          name="email"
+          placeholder="with a placeholder"
+          type="email"
+          value={state.email}
+          onChange={(e) =>
+            dispatch({
+              type: "changeValue",
+              field: e.target.name,
+              value: e.target.value,
+            })
+          }
+        />
+      </>
 
-        <Button>Submit</Button>
-        <Button onClick={() => dispatch({ type: "reset" })}> reset</Button>
-      </Form>
+      <Button>Submit</Button>
+      <Button onClick={() => dispatch({ type: "reset" })}> reset</Button>
     </div>
   );
 };
