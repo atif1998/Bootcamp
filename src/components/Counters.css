@@ -1,0 +1,14 @@
+.zero{
+    color: green;
+    background-color: red;
+  }
+  .non-zero{
+    color: blue;
+    background-color: yellow;
+  }
+  .button1{
+    background:rebeccapurple;
+  }
+  .button2{
+    background-color: blue;
+  }
