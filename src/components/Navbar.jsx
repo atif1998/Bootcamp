@@ -6,6 +6,16 @@ export const Navbar = () => {
       <ul className="nav">
         <li className="nav-item">
           <Link
+            to="Counter1"
+            className="nav-link active"
+            aria-current="page"
+            href="#"
+          >
+            Counter1
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
             to="List"
             className="nav-link active"
             aria-current="page"

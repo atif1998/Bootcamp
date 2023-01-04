@@ -18,6 +18,7 @@ import Other from "./components/Other";
 import Spasm from "./components/Spasm";
 import Book from "./components/Book";
 import RegistraionForm from "./components/RegistraionForm";
+import Counter1 from "./components/Counter1";
 
 const dummyExpense = [
   {
@@ -55,6 +56,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Navbar />} />
+        <Route path="/Counter1" element={<Counter1 />} />
         <Route path="/list" element={<List />} />
         <Route path="/Tables" element={<Tables />} />
         <Route path="/Cards" element={<Cards />} />
